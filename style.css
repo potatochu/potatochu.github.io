@@ -77,7 +77,7 @@ body{
     justify-items: center;
     /* grid-template-columns: 1fr, 1fr, 1fr); */
     margin-top: 250px;
-    padding-bottom: 200px;
+    padding-bottom: 110px;
     grid-gap: 20px;
 }
 .container .card{
