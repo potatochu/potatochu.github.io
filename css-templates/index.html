@@ -7,9 +7,74 @@
     <meta name="Keywords" content="HTML,CSS,JavaScript,CSS Templates,CSS Layouts,Web development,tutorials,programming,demos,tips">
     <meta name="Description" content="Collection of layouts, templates, patterns design of CSS. Feel free to look.">
     <title>css-templates</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>CSS Templates</h1>
-    <p>Page under maintenance</p>
+    <div id="curtain">
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">CSS Templates</a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Ideas</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <!-- <div class="toggle" onclick="toggle()"></div> -->
+    </div>
+    <div class="banner">
+        <header>
+            <a href="css-templates" class="logo">ROZAQ.COM</a>
+            <div class="toggle" id="toggleMenu" onclick="toggleMenu()"></div>
+        </header>
+        <img src="images/banner-css.jpg" alt="Banner CSS">
+        <div class="content">
+            <h2>CSS Templates</h2>
+            <p>Collection of layouts, templates, patterns design of CSS.</p>
+        </div>
+    </div>
+    <div class="container">
+        <section>
+            <h2 class="title">LAYOUTS</h2>
+            <div class="content">
+                <div class="card">
+                    card
+                </div>
+                <div class="card">
+                    card
+                </div>
+                <div class="card">
+                    card
+                </div>
+                <div class="card">
+                    card
+                </div>
+                <div class="card">
+                    card
+                </div>
+                <div class="card">
+                    card
+                </div>
+                <div class="card">
+                    card
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="title">NAVIGATIONS</h2>
+            <div class="content">
+                
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript">
+        function toggleMenu() {
+            var curtain = document.getElementById('curtain');
+            curtain.classList.toggle('active');
+            document.getElementById('toggleMenu').classList.toggle('active');
+            curtain.style.zIndex = '1001';
+        }
+    </script>
 </body>
 </html>
