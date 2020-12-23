@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rozaq</title>
+    <meta content="index,follow" name="googlebot">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Keywords" content="rozaq,portfolio,css,templates,html,javascript,tips,tutorials">
+    <meta name="Description" content="Personal page of Rozaq a Web developer. Includes Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, PHP.">
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div id="progressbar"></div>
+    <div id="scrollpath"></div>
+    <div class="text1">
+        <p>Hi, i am</p>
+    </div>
+    <div class="text2">
+        <p>I am <span>WEB DEVELOPER</span></p>
+    </div>
+    <div class="title"> 
+        <h2>ROZAQ</h2>
+        <h2>ROZAQ</h2>
+    </div>
+    <div class="socmed">
+        <ul>
+            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="images/coding-2.png">
+                    <h3>CSS Templates</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Collection of layouts, templates, patterns design of CSS. Feel free to look, hope it helps you!</p>
+                    <a href="css-templates">Go to page</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="images/sketch.png">
+                    <h3>Design</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>My Portfolio page, collection of modified html designs and templates, backend and frontend.</p>
+                    <a href="#">Coming soon</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="images/ideas.png">
+                    <h3>Ideas</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Some random stuff, maybe mobile apps, plugins, code blocks. Feel free to explore if something comes up!.</p>
+                    <a href="#">Coming soon</a>
+                </div>
+            </div>
+        </div>
+        <div class="footnote">Icons made by <a href="https://www.flaticon.com/authors/ddara" title="dDara">&nbsp;dDara,&nbsp;</a><a href="https://www.flaticon.com/authors/linector" title="Linector">Linector</a> &nbsp;from <a href="https://www.flaticon.com/" title="Flaticon">&nbsp;www.flaticon.com</a></div>
+        <!-- <div class="footnote">Icons made by <a href="https://www.flaticon.com/authors/ddara" title="dDara">dDara</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a></div> -->
+    </div>
+    <script>
+        let progress = document.getElementById("progressbar");
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function(){
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+    </script>
+</body>
+</html>
