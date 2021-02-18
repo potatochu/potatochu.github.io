@@ -103,6 +103,96 @@
     }
 }
 
+#popup-wheel{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    // bottom: 0;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    background: #c6e1e4 url(../img/produk/benecol.png) no-repeat;
+    background-size: cover;
+    // background-position-y: 180px;
+    border-radius: 8px;
+    visibility: hidden;
+    opacity: 0;
+    // display: block;
+    transition: 0.5s;
+    z-index: 9999;
+
+    @media screen and (max-width: 768px){
+        width: 400px;
+    }
+
+    &.active{
+        visibility: visible;
+        opacity: 1;
+        top: 50%;
+        transition: 0.5s;
+    }
+    .close{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 4px;
+        background: #921414;
+        padding: 5px 15px;
+        cursor: pointer;
+        &:hover{
+            transition: 0.3s;
+            background: #c71919;
+        }
+    }
+
+    h1{
+        color: $dark_accent_color;
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        opacity: 0.7;
+        top: 0;
+        left: 0;
+        border-radius: 8px;
+    }
+
+    input,textarea{
+        border-radius: 6px;
+    }
+
+    input[type=text]{
+        margin-bottom: 15px;
+        width: 100%;
+        border: none;
+        padding: 10px 20px;
+
+        &:focus,&:active{
+            outline: none;
+        }
+    }
+
+    textarea{
+        width: 100%;
+        border: none;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+
+        &:focus,&:active{
+            outline: none;
+        }
+    }
+}
+
 #popup-buy{
     position: fixed;
     top: 40%;
