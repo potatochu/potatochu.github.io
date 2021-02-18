@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrive</title>
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/jarallax.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
+    <link href="assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+    <script src="assets/js/swiper.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="app">
+        <header class="main-header">
+            <div class="logo" id="nav-logo">
+                <a href="#">
+                    <img src="assets/img/logo-lookup-atas.png" alt="">
+                </a>
+            </div>
+            <input type="checkbox" class="menu-btn" id="menu-btn">
+            <label for="menu-btn" class="menu-icon">
+                <span class="menu-icon__line"></span>
+            </label>
+    
+            <ul class="nav-links">
+                <li class="nav-link active">
+                    <a href="produk.html">Produk</a>
+                </li>
+                <li class="nav-link dropdown">
+                    <a href="#">Artikel</a>
+                    <ul class="dropdown-content">
+                        <li><a href="artikel.html">Kenali Kolesterol</a></li>
+                        <li><a href="artikel.html">Kenali Serat</a></li>
+                        <li><a href="artikel.html">Resep Enak</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link">
+                    <a href="event.html">Event</a>
+                </li>
+                <!-- <li class="nav-link">
+                    <a href="#">Kata Mereka</a>
+                </li> -->
+                <li class="nav-link dropdown">
+                    <a href="#">Fitur</a>
+                    <ul class="dropdown-content">
+                        <li><a href="cek-jantung.html">Risiko Serangan Jantung</a></li>
+                        <li><a href="kalkulator-serat.html">Kalkulator Serat</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link">
+                    <a href="contact.html">Hubungi Kami</a>
+                </li>
+                <li class="nav-link search-icon">
+                    <a href="#" onclick="toggleSearch()"><i class="fa fa-search"></i></a>
+                </li>
+                
+            </ul>
+    
+            <div class="search-container">
+                <div class="row search-header">
+                    <div class="col-6" style="text-align: left; padding: 0;">
+                        <h2>Pencarian</h2>
+                    </div>
+                    <div class="col-6" style="text-align: right; padding: 0;">
+                        <a href="#" class="close-search" onclick="toggleSearch()"><i class="fas fa-times"></i></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <form action="">
+                            <input type="text" id="search-input" placeholder="Ketik untuk mencari...">
+                            <button type="button" class="search-btn"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row equal">
+                    <div class="col-sm-4 d-flex pb-3">
+                        <div class="search-card">
+                            <div class="image">
+                                <img src="assets/img/artikel/kl1.jpg" alt="">
+                            </div>
+                            <div class="meta">
+                                <span class="red">Kolesterol</span>
+                                <a href="#"><h5>6 Cara Bantu Menurunkan Kolesterol Secara Alami</h3></a>
+                                <a href="#" class="more">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 d-flex pb-3">
+                        <div class="search-card">
+                            <div class="image">
+                                <img src="assets/img/artikel/kl2.jpg" alt="">
+                            </div>
+                            <div class="meta">
+                                <span class="red">Kolesterol</span>
+                                <a href="#"><h5>6 Cara Bantu Menurunkan Kolesterol Secara Alami</h3></a>
+                                <a href="#" class="more">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 d-flex pb-3">
+                        <div class="search-card">
+                            <div class="image">
+                                <img src="assets/img/artikel/sr1.jpg" alt="">
+                            </div>
+                            <div class="meta">
+                                <span class="green">Serat</span>
+                                <a href="#"><h5>6 Cara Bantu Menurunkan Kolesterol Secara Alami</h3></a>
+                                <a href="#" class="more">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 d-flex pb-3">
+                        <div class="search-card">
+                            <div class="image">
+                                <img src="assets/img/artikel/sr2.jpg" alt="">
+                            </div>
+                            <div class="meta">
+                                <span class="red">Serat</span>
+                                <a href="#"><h5>6 Cara Bantu Menurunkan Kolesterol Secara Alami</h3></a>
+                                <a href="#" class="more">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 d-flex pb-3">
+                        <div class="search-card">
+                            <div class="image">
+                                <img src="assets/img/produk/59_65_nutrive-fibershot_thumbnail.png" alt="">
+                            </div>
+                            <div class="meta">
+                                <span class="blue">Produk</span>
+                                <a href="#"><h5>Nutrive Fibershot</h3></a>
+                                <a href="#" class="more">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 d-flex pb-3">
+                        <div class="search-card">
+                            <div class="image">
+                                <img src="assets/img/artikel/kl3.jpg" alt="">
+                            </div>
+                            <div class="meta">
+                                <span class="red">Kolesterol</span>
+                                <a href="#"><h5>6 Cara Bantu Menurunkan Kolesterol Secara Alami</h3></a>
+                                <a href="#" class="more">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center; width: 100%; margin-top: 20px;">
+                        <div class="lds-dual-ring"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <section class="hero produk cek-jantung">
+            <h1>Alat Penilaian Perkiraan Risiko Jantung Dalam 10 Tahun Ke Depan</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus autem distinctio corrupti ex dolore unde accusantium veniam. Tenetur sit molestias cupiditate cumque labore.</p>
+            <a href="cek-jantung-1.html" class="btn">Cek Risiko Jantung</a>
+        </section>
+
+        <footer>
+            <div class="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <div class="logo">
+                                <img src="assets/img/logo-lookup-atas.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div class="links">
+                                <ul>
+                                    <li><a href="#">Tentang Nutrive</a></li>
+                                    <li><a href="#">Tentang Kalbe</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Syarat &amp; Ketentuan</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div class="kalbe-logo">
+                                <img src="assets/img/kalbe.png" alt="">
+                            </div>
+                            <div class="socials">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-youtube"></i></a>
+                                    </li>
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            Copyright 2021 Nutrieve Benecol, All Rights Reserved
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="popup-buy">
+        <div class="row">
+            <div class="col-md-4 produk">
+                <img src="assets/img/benecol-bl.png" alt="">
+                <h2>Blackcurrant Smoothies</h2>
+            </div>
+            <div class="col-md-8 toko">
+                <h2>Tersedia di:</h2>
+                <div class="links">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="col-sm-6 img">
+                                    <img src="assets/img/kalcare.png" alt="">
+                                </div>
+                                <div class="col-sm-6 icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="col-sm-6 img">
+                                    <img src="assets/img/bukalapak.png" alt="">
+                                </div>
+                                <div class="col-sm-6 icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="col-sm-6 img">
+                                    <img src="assets/img/tokped.png" alt="">
+                                </div>
+                                <div class="col-sm-6 icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="col-sm-6 img">
+                                    <img src="assets/img/blibli.png" alt="">
+                                </div>
+                                <div class="col-sm-6 icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="col-sm-6 img">
+                                    <img src="assets/img/jdid.png" alt="">
+                                </div>
+                                <div class="col-sm-6 icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <a class="close" onclick="beliSekarang()">
+            <!-- <i class="far fa-times-circle"></i> -->
+            TUTUP
+        </a>
+    </div>
+
+    <div id="popup-testimonial">
+        <div class="row">
+            <div class="col">
+                <h1>Ceritakan Pengalaman Anda:</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12" style="margin-bottom: 10px;">
+                <div>
+                    <input type="text" placeholder="Nama" name="" id="">
+                </div>
+                <div>
+                    <input type="text" placeholder="Usia" name="" id="">
+                </div>
+                <div>
+                    <input type="text" placeholder="Asal" name="" id="">
+                </div>
+                <div>
+                    <textarea name="" placeholder="Testimoni anda..." id="" cols="30" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12" style="margin-bottom: 10px;">
+                <div class="row" style="justify-content: center; text-align: center;">
+                    <div class="preview col-12">
+                        <img src="assets/img/testi2.jpg" style="width: 100%; height: 180px; object-fit: cover;" alt="">
+                    </div>
+                    <div class="col-12">
+                        <span style="margin-bottom: 15px;">preview.jpeg</span>
+                    </div>
+                    <div class="col-12 upload-btn" style="padding: 10px;">
+                        <a href="#" class="btn" style="display: block; text-align: center;">UPLOAD FOTO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="padding-bottom: 10px; border-top: solid 2px #0d4b68;">
+            <div class="col" style="margin-top: 25px;">
+                <a href="#" class="btn" style="margin-right: 10px;">Submit</a>
+                <a onclick="kataMereka()" class="btn red">Cancel</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <div class="hero">
+        <h1>Hero text</h1>
+    </div> -->
+
+    <script src="assets/js/jarallax.min.js"></script>
+    <script src="assets/js/jarallax-element.js"></script>
+    <script>
+        //parallax
+        jarallax(document.querySelectorAll('.jarallax'), {
+            speed: 0.5
+        });
+
+        //blur modal popup
+        function beliSekarang(){
+            var blur = document.getElementById('app');
+            blur.classList.toggle('blurred');
+
+            var popup = document.getElementById('popup-buy');
+            popup.classList.toggle('active');
+        }
+
+        function kataMereka(){
+            var blur = document.getElementById('app');
+            blur.classList.toggle('blurred');
+
+            var popup = document.getElementById('popup-testimonial');
+            popup.classList.toggle('active');
+        }
+
+        const header = document.querySelector('.main-header');
+        const logo = document.querySelector('#nav-logo');
+        var prevScrollpos = window.pageYOffset;
+        window.addEventListener('scroll', ()=>{
+            var currentScrollPos = window.pageYOffset;
+            const scrollpos = window.scrollY;
+            if (scrollpos > 10) {
+                header.classList.add('scrolled');
+                if (prevScrollpos > currentScrollPos) {
+                    header.style.top = "0";
+                    logo.style.opacity = "1";
+                } else {
+                    header.style.top = "-53px";
+                    logo.style.opacity = "0";
+                }
+                prevScrollpos = currentScrollPos;
+            }else{
+                header.classList.remove('scrolled');
+            }
+        })
+    
+        function toggleSearch(){
+            const menuToggle = document.querySelector('.search-container');
+            menuToggle.classList.toggle('active');
+        }
+
+        var swiper = new Swiper('.slide-prod', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: '3',
+            initialSlide: 1,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 3,
+                slideShadows: true,
+            },
+            // loop:true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        var swiper = new Swiper('.slide-artikel', {
+            grabCursor: true,
+            centeredSlides: true,
+            // slidesPerView: '3',
+            spaceBetween: 10,
+            loop:true,
+            // pagination: {
+            //     el: '.swiper-pagination-artikel',
+            //     dynamicBullets: true,
+            // },
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                }
+            },
+        });
+
+        var swiper = new Swiper('.slide-km', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            initialSlide: 1,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 3,
+                slideShadows: true,
+            },
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
+        });        
+    </script>
+</body>
+</html>
