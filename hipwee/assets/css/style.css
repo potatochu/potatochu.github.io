@@ -1040,7 +1040,7 @@ article {
   article .title h1 {
     font-size: 30px;
     line-height: 36px;
-    margin: 10px 0; }
+    margin: 15px 0; }
     @media screen and (max-width: 767px) {
       article .title h1 {
         font-size: 24px;
