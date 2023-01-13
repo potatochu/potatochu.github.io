@@ -10,7 +10,7 @@
             <!--begin::Header-->
             <div class="card-header border-0 pt-5">
                 <h3 class="card-title align-items-start flex-column">
-                    <span class="card-label fw-bold fs-3 mb-1">Companies List</span>
+                    <span class="card-label fw-bold fs-3 mb-1">Jobs List</span>
                     {{-- <span class="text-muted mt-1 fw-semibold fs-7">Users, Job Seekers</span> --}}
                 </h3>
                 <div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover" title="Click to add a company">
@@ -22,7 +22,7 @@
                             <rect x="4.36396" y="11.364" width="16" height="2" rx="1" fill="currentColor" />
                         </svg>
                     </span>
-                    <!--end::Svg Icon-->New Company</a>
+                    <!--end::Svg Icon-->New Job</a>
                 </div>
             </div>
             <!--end::Header-->
@@ -35,9 +35,10 @@
                         <!--begin::Table head-->
                         <thead>
                             <tr class="fw-bold text-muted">
+                                <th class="min-w-150px">Occupation</th>
                                 <th class="min-w-200px">Company</th>
-                                <th class="min-w-150px">PIC</th>
                                 <th class="min-w-150px">Location</th>
+                                <th class="min-w-150px">Status</th>
                                 <th class="min-w-150px">Created</th>
                                 <th class="min-w-100px text-end">Actions</th>
                             </tr>
@@ -45,29 +46,33 @@
                         <!--end::Table head-->
                         <!--begin::Table body-->
                         <tbody>
-                            @foreach ($companies as $item)
+                            @foreach ($jobs as $item)
                             <tr>
                                 <td>
-                                    <span class="text-dark fw-bold text-hover-primary d-block fs-6">{{$item->company_name}}</span>
-                                    <span class="text-muted fw-semibold text-muted d-block fs-7">{{$item->company_email ?? '-'}}</span>
-                                    @isset($item->company_verified_date)
-                                    <span class="badge badge-light-success me-2">verified</span>
-                                    @endisset
+                                    <span class="text-dark fw-bold text-hover-primary d-block fs-6">{{$item->occupation->jobs_occupation_name}}</span>
+                                    <span class="text-muted fw-semibold text-muted d-block fs-7">{{$item->category->jobs_category_name ?? '-'}}</span>
                                 </td>
                                 <td>
-                                    <span class="text-dark fw-bold text-hover-primary d-block fs-6">{{$item->company_pic_name}}</span>
-                                    <span class="text-muted fw-semibold text-muted d-block fs-7">{{$item->company_pic_email ?? '-'}}</span>
+                                    <span class="text-dark fw-bold text-hover-primary d-block fs-6">{{$item->company->company_name}}</span>
+                                    <span class="text-muted fw-semibold text-muted d-block fs-7">{{$item->company_jobs_email ?? '-'}}</span>
+                                    {{-- @isset($item->company_verified_date)
+                                    <span class="badge badge-light-success me-2">verified</span>
+                                    @endisset --}}
                                 </td>
                                 <td>
                                     <span class="text-dark fw-bold text-hover-primary d-block fs-6">{{$item->city->city_name}}</span>
                                     <span class="text-muted fw-semibold text-muted d-block fs-7">{{$item->states->states_name.', '.$item->country->country_name}}</span>
                                 </td>
                                 <td>
-                                    <span class="text-dark fw-bold text-hover-primary d-block fs-6">{{$item->company_created_date}}</span>
+                                    <span class="text-dark fw-bold text-hover-primary d-block fs-6">{{$item->verified->company_jobs_verified_status_name}}</span>
+                                    <span class="badge {{ ($item->jobs_status_id == '1') ? 'badge-light-success':'badge-light-danger'}} me-2">{{$item->active->jobs_status_name}}</span>
+                                </td>
+                                <td>
+                                    <span class="text-dark fw-bold text-hover-primary d-block fs-6">{{$item->company_jobs_created_date}}</span>
                                 </td>
                                 <td>
                                     <div class="d-flex justify-content-end flex-shrink-0">
-                                        <a href="{{url('company/view/'.$item->company_id)}}" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover" title="View Company">
+                                        <a href="{{url('jobs/view/'.$item->company_jobs_id)}}" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover" title="View Detail">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
                                             <span class="svg-icon svg-icon-3">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

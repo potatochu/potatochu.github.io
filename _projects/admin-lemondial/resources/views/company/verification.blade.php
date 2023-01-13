@@ -50,9 +50,6 @@
                                 <td>
                                     <span class="text-dark fw-bold text-hover-primary d-block fs-6">{{$item->company_name}}</span>
                                     <span class="text-muted fw-semibold text-muted d-block fs-7">{{$item->company_email ?? '-'}}</span>
-                                    @isset($item->company_verified_date)
-                                    <span class="badge badge-light-success me-2">verified</span>
-                                    @endisset
                                 </td>
                                 <td>
                                     <span class="text-dark fw-bold text-hover-primary d-block fs-6">{{$item->company_pic_name}}</span>

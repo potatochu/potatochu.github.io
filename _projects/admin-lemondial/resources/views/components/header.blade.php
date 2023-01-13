@@ -217,7 +217,7 @@
                                 <!--begin:Menu item-->
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link py-3" href="#">
+                                    <a class="menu-link py-3" href="{{url('jobs/create')}}">
                                         <span class="menu-icon">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
                                             <span class="svg-icon svg-icon-3">
@@ -233,13 +233,10 @@
                                     <!--end:Menu link-->
                                 </div>
                                 <!--end:Menu item-->
-                                <!--begin::Menu separator-->
-                                <div class="separator my-2"></div>
-                                <!--end::Menu separator-->
                                 <!--begin:Menu item-->
                                 <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link py-3" href="#">
+                                    <a class="menu-link py-3" href="{{route('jobs')}}">
                                         <span class="menu-icon">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
                                             <span class="svg-icon svg-icon-3">
@@ -256,9 +253,9 @@
                                 </div>
                                 <!--end:Menu item-->
                                 <!--begin:Menu item-->
-                                <div class="menu-item">
+                                {{-- <div class="menu-item">
                                     <!--begin:Menu link-->
-                                    <a class="menu-link py-3" href="#">
+                                    <a class="menu-link py-3" href="{{url('jobs/verification')}}">
                                         <span class="menu-icon">
                                             <!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
                                             <span class="svg-icon svg-icon-3">
@@ -273,7 +270,7 @@
                                         <span class="menu-title">Verification</span>
                                     </a>
                                     <!--end:Menu link-->
-                                </div>
+                                </div> --}}
                                 <!--end:Menu item-->
 
                             </div>

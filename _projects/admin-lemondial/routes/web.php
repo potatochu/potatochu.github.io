@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\JobsController;
 
 //home
 Route::controller(DashboardController::class)->group(function () {
@@ -38,6 +39,22 @@ Route::controller(CompanyController::class)->group(function () {
     Route::get('company/verification', 'verification');
     Route::get('company/delete/{id}', 'delete');
 });
+
+//Jobs
+Route::controller(JobsController::class)->group(function () {
+    Route::get('jobs', 'index')->name('jobs');
+    Route::get('jobs/create', 'create');
+    Route::post('jobs/store', 'store');
+    Route::get('jobs/view/{id}', 'view');
+    Route::get('jobs/edit/{id}', 'edit');
+    Route::post('jobs/update/{id}', 'update');
+    Route::post('jobs/profile-verify/{id}', 'verify');
+    Route::get('jobs/verification', 'verification');
+    Route::get('jobs/delete/{id}', 'delete');
+});
+
+//metadata
+
 
 //auth
 Route::controller(LoginController::class)->group(function () {

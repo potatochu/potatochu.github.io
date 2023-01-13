@@ -98,7 +98,7 @@
                             </a>
                             <!--end:Menu link-->
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="#">
+                            <a class="menu-link" href="{{url('jobs')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -505,7 +505,7 @@
                 <!--end::Menu item-->
                 <!--begin::Menu item-->
                 <div class="menu-item px-3">
-                    <a href="#" class="menu-link px-3">Post a job</a>
+                    <a href="{{url('jobs/create')}}" class="menu-link px-3">Post a job</a>
                 </div>
                 <!--end::Menu item-->
                 <!--begin::Menu item-->
